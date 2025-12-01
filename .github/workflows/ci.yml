@@ -32,8 +32,8 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Build check
-        run: echo "API build complete"
+      - name: Build Docker image
+        run: docker build -t uzoamakaalor/ecommerce-api:latest .
 
   build-webapp:
     runs-on: ubuntu-latest
@@ -55,5 +55,5 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Build application
-        run: npm run build
+      - name: Build Docker image
+        run: docker build -t uzoamakaalor/ecommerce-webapp:latest .
